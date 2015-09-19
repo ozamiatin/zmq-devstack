@@ -21,12 +21,12 @@ function install_zeromq {
             install_package redis python-redis
         fi
     elif is_ubuntu; then
-        install_package libzmq1 python-zmq
+        install_package libzmq4 python-zmq
         if [ "$ZEROMQ_MATCHMAKER" == "redis" ]; then
             install_package redis-server python-redis
         fi
     elif is_suse; then
-        install_package libzmq1 python-pyzmq
+        install_package libzmq4 python-pyzmq
         if [ "$ZEROMQ_MATCHMAKER" == "redis" ]; then
             install_package redis python-redis
         fi
@@ -45,12 +45,12 @@ function uninstall_zeromq {
             uninstall_package redis python-redis
         fi
     elif is_ubuntu; then
-        uninstall_package libzmq1 python-zmq
+        uninstall_package libzmq4 python-zmq
         if [ "$ZEROMQ_MATCHMAKER" == "redis" ]; then
             uninstall_package redis-server python-redis
         fi
     elif is_suse; then
-        uninstall_package libzmq1 python-pyzmq
+        uninstall_package libzmq4 python-pyzmq
         if [ "$ZEROMQ_MATCHMAKER" == "redis" ]; then
             uninstall_package redis python-redis
         fi
